@@ -1,15 +1,11 @@
 import React from 'react';
 import MessageList from './MessageList.jsx'
 
-class App extends React.Component {
-  constructor() {
-    super ();
+const messages = [{Id: 1, Text:'this is m1'}, {Id:2, Text:'This is m2'}]
 
-  }
-
-  render() {
-    return (<MessageList />);
-  }
-}
+console.log (messages);
+const App = () =>(
+  <MessageList messages={messages}/>
+)
 
 export default App;
