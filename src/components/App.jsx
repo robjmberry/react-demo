@@ -1,11 +1,10 @@
 import React from 'react';
-import MessageList from './MessageList.jsx'
-
-const mydata = [{Id: 1, Text:'this is m1'}, {Id:2, Text:'This is m2'}]
+import ServiceRegistryList from './ServiceRegistryList.jsx'
+import mydata from '../data/testdata';
 
 
 const App = () =>(
-  <MessageList messages={mydata}/>
+  <ServiceRegistryList registrations={mydata}/>
 )
 
 export default App;

@@ -19684,16 +19684,18 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _MessageList = __webpack_require__(161);
+	var _ServiceRegistryList = __webpack_require__(161);
 
-	var _MessageList2 = _interopRequireDefault(_MessageList);
+	var _ServiceRegistryList2 = _interopRequireDefault(_ServiceRegistryList);
+
+	var _testdata = __webpack_require__(163);
+
+	var _testdata2 = _interopRequireDefault(_testdata);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var mydata = [{ Id: 1, Text: 'this is m1' }, { Id: 2, Text: 'This is m2' }];
-
 	var App = function App() {
-	  return _react2.default.createElement(_MessageList2.default, { messages: mydata });
+	  return _react2.default.createElement(_ServiceRegistryList2.default, { registrations: _testdata2.default });
 	};
 
 	exports.default = App;
@@ -19712,24 +19714,53 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Message = __webpack_require__(162);
+	var _ServiceRegistry = __webpack_require__(162);
 
-	var _Message2 = _interopRequireDefault(_Message);
+	var _ServiceRegistry2 = _interopRequireDefault(_ServiceRegistry);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MessageList = function MessageList(_ref) {
-	  var messages = _ref.messages;
+	var ServiceRegistryList = function ServiceRegistryList(_ref) {
+	  var registrations = _ref.registrations;
 	  return _react2.default.createElement(
-	    'ul',
+	    'table',
 	    null,
-	    messages.map(function (message) {
-	      return _react2.default.createElement(_Message2.default, { key: message.Id, message: message.Text });
+	    _react2.default.createElement(
+	      'thead',
+	      null,
+	      _react2.default.createElement(
+	        'th',
+	        null,
+	        'Service'
+	      ),
+	      _react2.default.createElement(
+	        'th',
+	        null,
+	        'App Id'
+	      ),
+	      _react2.default.createElement(
+	        'th',
+	        null,
+	        'Server'
+	      ),
+	      _react2.default.createElement(
+	        'th',
+	        null,
+	        'Port'
+	      ),
+	      _react2.default.createElement(
+	        'th',
+	        null,
+	        'Last Heartbeat'
+	      )
+	    ),
+	    registrations.map(function (registry) {
+	      return _react2.default.createElement(_ServiceRegistry2.default, { key: registry.Id, registry: registry });
 	    })
 	  );
 	};
 
-	exports.default = MessageList;
+	exports.default = ServiceRegistryList;
 
 /***/ },
 /* 162 */
@@ -19747,16 +19778,71 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Message = function Message(_ref) {
-	    var message = _ref.message;
+	var ServiceRegistry = function ServiceRegistry(_ref) {
+	    var registry = _ref.registry;
 	    return _react2.default.createElement(
-	        'li',
+	        'tr',
 	        null,
-	        message
+	        _react2.default.createElement(
+	            'td',
+	            null,
+	            registry.Service
+	        ),
+	        _react2.default.createElement(
+	            'td',
+	            null,
+	            registry.AppId
+	        ),
+	        _react2.default.createElement(
+	            'td',
+	            null,
+	            registry.Server
+	        ),
+	        _react2.default.createElement(
+	            'td',
+	            null,
+	            registry.Port
+	        ),
+	        _react2.default.createElement(
+	            'td',
+	            null,
+	            registry.LastHeartBeatSeconds
+	        )
 	    );
 	};
 
-	exports.default = Message;
+	exports.default = ServiceRegistry;
+
+/***/ },
+/* 163 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var mydata = [{
+	  Id: 1,
+	  Service: 'Secore Inbound',
+	  Description: 'Processes inbound messages from Secore',
+	  ExecutableLocation: 'c:\\',
+	  AppId: 100,
+	  Server: 'Robs PC',
+	  Port: 20,
+	  LastHeartBeatSeconds: 60
+	}, {
+	  Id: 2,
+	  Service: 'Secore Outbound',
+	  Description: 'Processes outbound messages from Secore',
+	  ExecutableLocation: 'c:\\',
+	  AppId: 100,
+	  Server: 'Robs PC',
+	  Port: 21,
+	  LastHeartBeatSeconds: 40
+	}];
+
+	exports.default = mydata;
 
 /***/ }
 /******/ ]);
