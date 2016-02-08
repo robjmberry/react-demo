@@ -4,16 +4,19 @@ import ServiceRegistry from './ServiceRegistry.jsx'
 const ServiceRegistryList = ({registrations}) =>  (
     <table>
     <thead>
-
-    <th>Service</th>
-    <th>App Id</th>
-    <th>Server</th>
-    <th>Port</th>
-    <th>Last Heartbeat</th>
+      <tr>
+        <th>Service</th>
+        <th>App Id</th>
+        <th>Server</th>
+        <th>Port</th>
+        <th>Last Heartbeat</th>
+      </tr>
     </thead>
+    <tbody>
     { registrations.map((registry) =>
       <ServiceRegistry key={registry.Id} registry={registry} />
     )}
+    </tbody>
     </table>
   )
 

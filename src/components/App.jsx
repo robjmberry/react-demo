@@ -1,10 +1,8 @@
 import React from 'react';
-import ServiceRegistryList from './ServiceRegistryList.jsx'
-import mydata from '../data/testdata';
-
+import VisibleServiceRegistryList from './VisibleServiceRegistryList.jsx'
 
 const App = () =>(
-  <ServiceRegistryList registrations={mydata}/>
+  <VisibleServiceRegistryList />
 )
 
 export default App;
