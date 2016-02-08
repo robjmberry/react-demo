@@ -19690,11 +19690,10 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var messages = [{ Id: 1, Text: 'this is m1' }, { Id: 2, Text: 'This is m2' }];
+	var mydata = [{ Id: 1, Text: 'this is m1' }, { Id: 2, Text: 'This is m2' }];
 
-	console.log(messages);
 	var App = function App() {
-	  return _react2.default.createElement(_MessageList2.default, { messages: messages });
+	  return _react2.default.createElement(_MessageList2.default, { messages: mydata });
 	};
 
 	exports.default = App;
@@ -19719,12 +19718,12 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MessageList = function MessageList(messages) {
+	var MessageList = function MessageList(_ref) {
+	  var messages = _ref.messages;
 	  return _react2.default.createElement(
 	    'ul',
 	    null,
-	    console.log(messages),
-	    messages.messages.map(function (message) {
+	    messages.map(function (message) {
 	      return _react2.default.createElement(_Message2.default, { key: message.Id, message: message.Text });
 	    })
 	  );
@@ -19748,14 +19747,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Message = function Message(message) {
+	var Message = function Message(_ref) {
+	    var message = _ref.message;
 	    return _react2.default.createElement(
-	        'div',
+	        'li',
 	        null,
-	        console.log(message),
-	        message.message
+	        message
 	    );
 	};
+
 	exports.default = Message;
 
 /***/ }

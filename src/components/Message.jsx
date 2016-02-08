@@ -1,8 +1,7 @@
 import React from 'react'
 
-const Message = (message) =>  (
-    <div>
-    {console.log(message)}
-    {message.message}</div>
+const Message = ({message}) =>  (
+    <li>{message}</li>
   )
+
 export default Message;
