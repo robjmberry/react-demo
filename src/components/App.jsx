@@ -3,7 +3,7 @@ import MessageList from './MessageList.jsx'
 
 const messages = [{Id: 1, Text:'this is m1'}, {Id:2, Text:'This is m2'}]
 
-console.log (messages);
+
 const App = () =>(
   <MessageList messages={messages}/>
 )
