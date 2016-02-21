@@ -19,7 +19,9 @@
   "homepage": "https://github.com/robjmberry/react-demo#readme",
   "dependencies": {
     "babel-cli": "^6.4.0",
+    "bootstrap": "^3.3.6",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.28.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1"
@@ -40,6 +42,7 @@
     "eslint-plugin-react": "^3.4.2",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.5",
     "html-webpack-plugin": "^1.6.1",
     "jscs": "^2.1.1",
     "jsdom": "^6.5.1",
