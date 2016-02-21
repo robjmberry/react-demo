@@ -1,8 +1,9 @@
 import React from 'react';
 import ServiceRegistry from './ServiceRegistry.jsx'
+import {Table} from 'react-bootstrap'
 
 const ServiceRegistryList = ({registrations}) =>  (
-    <table>
+    <Table striped bordered condensed hover>
     <thead>
       <tr>
         <th>Service</th>
@@ -17,7 +18,7 @@ const ServiceRegistryList = ({registrations}) =>  (
       <ServiceRegistry key={registry.Id} registry={registry} />
     )}
     </tbody>
-    </table>
+    </Table>
   )
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import VisibleServiceRegistryList from './VisibleServiceRegistryList.jsx'
 import {Navbar} from 'react-bootstrap'
+import {PageHeader} from 'react-bootstrap'
 
 const App = () =>(
   <div>
@@ -9,6 +10,7 @@ const App = () =>(
       <Navbar.Brand>Demo</Navbar.Brand>
     </Navbar.Header>
   </Navbar>
+  <PageHeader>Service registrations</PageHeader>
   <VisibleServiceRegistryList />
   </div>
 )
